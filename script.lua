@@ -74,7 +74,7 @@ function init()
    metro_grid = metro.init(m_grid, 1000 / 30, -1)
    metro_grid:start()
   
-   if save_on_exit then params:read("/home/we/dust/data/" .. norns.state.name .. "_state.pset") end
+   if save_on_exit then params:read("/home/we/dust/data/" .. norns.state.shortname .. "/" .. norns.state.shortname .. "_state.pset") end
 end
 
 -- grid: interaction
@@ -194,5 +194,5 @@ function cleanup()
    -- nb:stop_all()
    metro.stop(m_screen)
    metro.stop(m_grid)
-   if save_on_exit then params:write("/home/we/dust/data/" .. norns.state.name .. "_state.pset") end
+   if save_on_exit then params:write("/home/we/dust/data/" .. norns.state.shortname .. "/" .. norns.state.shortname .. "_state.pset") end
 end

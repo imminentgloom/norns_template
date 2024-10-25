@@ -102,20 +102,6 @@ function g_redraw()
    end
 end
 
--- norns: drawing
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-function redraw()
-   if screen_dirty then
-      screen.clear()
-
-
-
-      screen.update()
-      screen_dirty = false
-   end
-end
-
 -- norns: interaction: keys
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -183,6 +169,20 @@ function enc(n, d)
       if n == 3 then
       
       end
+   end
+end
+
+-- norns: drawing
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+function redraw()
+   if screen_dirty then
+      screen.clear()
+
+
+
+      screen.update()
+      screen_dirty = false
    end
 end
 

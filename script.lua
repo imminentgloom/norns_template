@@ -60,7 +60,7 @@ function init()
    -- nb:add_param("voicename", "description")
    -- nb:add_player_params()
 
-   -- params:add_separator("PARMS")
+   -- params:add_separator("PARAMS")
     
    -- params:add_control("", "", controlspec())
    -- params:set_action("", function (x)  end)

@@ -16,8 +16,6 @@ local tab = require("tabutil")
 -- setup
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-local script_name = -- SCRIPT NAME!
-
 local save_on_exit = true
 
 local screen_dirty
@@ -75,7 +73,7 @@ function init()
    metro_screen = metro.init(m_screen, 1000 / 30, -1)
    metro_grid = metro.init(m_grid, 1000 / 30, -1)
    
-   if save_on_exit then params:read("/home/we/dust/data/" .. script_name .. "/" .. script_name .. "_state.pset") end
+   if save_on_exit then params:read("/home/we/dust/data/" .. norns.state.name .. "_state.pset") end
 end
 
 -- grid: interaction
@@ -195,5 +193,5 @@ function cleanup()
    -- nb:stop_all()
    metro.stop(m_screen)
    metro.stop(m_grid)
-   if save_on_exit then params:write("/home/we/dust/data/" .. script_name .. "/" .. script_name .. "_state.pset") end
+   if save_on_exit then params:write("/home/we/dust/data/" .. norns.state.name .. "_state.pset") end
 end

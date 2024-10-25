@@ -192,5 +192,8 @@ end
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 function cleanup()
+   -- nb:stop_all()
+   metro.stop(m_screen)
+   metro.stop(m_grid)
    if save_on_exit then params:write("/home/we/dust/data/" .. script_name .. "/" .. script_name .. "_state.pset") end
 end

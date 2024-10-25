@@ -79,7 +79,7 @@ end
 -- grid: interaction
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-function g:keys(x, y, z)
+function g.key(x, y, z)
    
 end
 
@@ -105,7 +105,7 @@ end
 -- norns: interaction: keys
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-function keys(n, z)
+function key(n, z)
    if n == 1 then key[1].held = true else key[1].held = false end
    if n == 2 then key[2].held = true else key[2].held = false end
    if n == 3 then key[3].held = true else key[3].held = false end

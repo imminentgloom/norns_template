@@ -70,8 +70,10 @@ function init()
    grid_dirty = true
 
    metro_screen = metro.init(m_screen, 1000 / 30, -1)
+   metro_screen:start()
    metro_grid = metro.init(m_grid, 1000 / 30, -1)
-   
+   metro_grid:start()
+  
    if save_on_exit then params:read("/home/we/dust/data/" .. norns.state.name .. "_state.pset") end
 end
 

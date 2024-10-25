@@ -21,11 +21,10 @@ local save_on_exit = true
 local screen_dirty
 local grid_dirty
 
-local key = {
-   held = false,
-   held = false,
-   held = false,
-}
+local key_1_held = false
+local key_2_held = false
+local key_3_held = false
+
 
 -- functions
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -106,11 +105,11 @@ end
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 function key(n, z)
-   if n == 1 then key[1].held = true else key[1].held = false end
-   if n == 2 then key[2].held = true else key[2].held = false end
-   if n == 3 then key[3].held = true else key[3].held = false end
+   if n == 1 then key_1_held = true else key_1_held = false end
+   if n == 2 then key_2_held = true else key_2_held = false end
+   if n == 3 then key_3_held = true else key_3_held = false end
    
-   if not key[1].held then
+   if not key_1_held then
       if n == 1 then
 
       end
@@ -124,7 +123,7 @@ function key(n, z)
       end
    end
 
-   if key[1].held then
+   if key_1_held then
       if n == 1 then
       
       end
@@ -143,7 +142,7 @@ end
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 function enc(n, d)
-   if not key[1].held then
+   if not key_1_held then
       if n == 1 then
 
       end
@@ -157,7 +156,7 @@ function enc(n, d)
       end
    end
 
-   if key[1].held then
+   if key_1_held then
       if n == 1 then
       
       end
